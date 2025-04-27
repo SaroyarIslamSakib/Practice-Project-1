@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Sample
 {
-    public void bubbleSort(List<int> arr, Func<int,int,bool> func)
+    public void bubbleSort<T>(List<T> arr, Func<T,T,bool> func)
     {
         int n = arr.Count;
         bool swapped;
@@ -16,7 +16,7 @@ public class Sample
                 bool result = func(arr[j], arr[j + 1]);
                 if (result)
                 {
-                    int temp = arr[j];
+                    T temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                     swapped = true;

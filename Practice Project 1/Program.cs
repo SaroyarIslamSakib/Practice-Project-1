@@ -10,7 +10,7 @@ namespace Practice_Project_1
         {
             Sample sample = new Sample();
 
-            Func<int, int, bool> func = (a, b) => 
+            Func<double, double, bool> func = (a, b) => 
             {
                 if(a>b)
                 {
@@ -22,9 +22,9 @@ namespace Practice_Project_1
                 }
             };
 
-            List<int> list = new List<int>()
+            List<double> list = new List<double>()
             {
-                10,6,4,8,25,68
+                10.5,6.3,4.1,8.9,25.5,68.6
             };
             sample.bubbleSort(list, func);
 
